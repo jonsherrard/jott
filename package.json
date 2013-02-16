@@ -12,7 +12,7 @@
     ],
     "main": "bin/jott",
     "bin": {
-        "jott": "./bin/jott"
+       "ott": "./bin/jott"
     },
     "scripts": {},
 	"scripts": {
@@ -35,7 +35,8 @@
         "stylus": "0.28.x",
         "ask": "0.1.x",
 		"cli": "0.4.4-2",
-		"walk": "2.2.1"
+		"walk": "2.2.1",
+		"fs-extra": "0.5.0"
     },
     "devDependencies": {},
     "bundledDependencies": [],

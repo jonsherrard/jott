@@ -1,5 +1,6 @@
-fs              = require 'fs'
-sys             = require 'sys'
+path			= require 'path'
+fs              = require 'fs-extra'
+util			= require 'util'
 cli             = require 'cli'
 
 VERSION = require './VERSION'
@@ -12,13 +13,19 @@ quitWithMsg = (message) ->
 
 createProject = () ->
 	# Create posts folder
-	fs.mkdir 'posts', (err, stdout, stderr) ->
-		err && throw err
-		console.log 'Created Posts folder.'
+	createFolders()
+
+createFolders = () ->
+
+	projectDir = path.resolve(process.cwd(), './')
+	templateDir = path.resolve(__dirname, '../skeleton/')
 	
-	fs.mkdirSync 'src', (err, stdout, stderr) ->
-		err && throw err
-		console.log 'Created src folder.'
+	fs.copy templateDir, projectDir, (err) ->
+		if err
+			console.log err
+		else
+			console.log 'Created Template'
+
 
 createBlog = () ->
 	console.log "Create Blog"

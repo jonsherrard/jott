@@ -1,0 +1,83 @@
+//black = #202020
+//white = rgb(220,220,200)
+
+white = #202020
+//black = rgb(220,220,200)
+black = #dccdcc
+
+body
+	color white
+	background black
+	font-family "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif
+	line-height 1.5
+	letter-spacing 1.5
+	font-size 1.3125em
+
+h1, h2, h3, h4, h5, p
+	margin 0.1em 0
+
+ul, ol
+	padding 1em 0 0 1em
+
+li
+	padding-bottom 0.5em
+
+a, a:hover, a:visited
+	color black
+	text-decoration none
+	cursor pointer
+
+
+.container
+	max-width 35em
+	min-width 280px
+	margin auto
+
+header
+	padding 20px 0px
+	background white
+	color black
+	margin-bottom 50px
+	& h1
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+	   font-weight: 300
+
+article
+	& p
+		margin 20px 0px
+	& a, a:hover, a:visited
+		color white
+		font-style italic
+	& a:hover
+		color lighten(white, 30%)
+
+.metadata
+	font-size 0.5em
+	margin-top 40px
+	font-weight normal
+	display block
+	text-align right
+
+.red_article
+	background rgb(80,0,0)
+
+.blue_article
+	background rgb(3,3,30)
+
+footer
+	position absolute
+	bottom 0px
+	padding 20px 0px
+	margin-top 50px
+	background white
+	color black
+	left 0
+	right 0
+	margin-right auto
+	margin-left auto
+
+@media (max-width: 767px)
+	body
+		padding 0px
+	.container
+		padding 20px

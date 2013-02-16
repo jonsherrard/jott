@@ -1,4 +1,4 @@
-fs              = require 'fs'
+fs              = require 'fs-extra'
 sys             = require 'sys'
 CoffeeScript    = require 'coffee-script'
 

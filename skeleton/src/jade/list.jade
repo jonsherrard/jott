@@ -1,0 +1,6 @@
+mixin link(title)
+    div
+        | &#9679;  
+        a(href='posts/#{title.toLowerCase().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '')}.html') #{title}
+
+include items
