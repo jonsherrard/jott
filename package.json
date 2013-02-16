@@ -10,11 +10,11 @@
             "email": "j@andthats.it"
         }
     ],
+    "main": "bin/jott",
     "bin": {
         "jott": "./bin/jott"
     },
     "scripts": {},
-    "main": "bin/jott",
 	"scripts": {
 	    "postinstall": "cake build"
 	},

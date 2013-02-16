@@ -7,11 +7,18 @@ VERSION = require './VERSION'
 CWD         = process.cwd()
 
 quitWithMsg = (message) ->
-	stamp(message)
+	console.log message
 	process.exit()
 
 createProject = () ->
-	console.log "Create Project"
+	# Create posts folder
+	fs.mkdir 'posts', (err, stdout, stderr) ->
+		err && throw err
+		console.log 'Created Posts folder.'
+	
+	fs.mkdirSync 'src', (err, stdout, stderr) ->
+		err && throw err
+		console.log 'Created src folder.'
 
 createBlog = () ->
 	console.log "Create Blog"
