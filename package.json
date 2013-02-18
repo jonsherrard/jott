@@ -41,7 +41,10 @@
   },
   "devDependencies": {},
   "bundledDependencies": [],
-  "license": "MIT",
+  "license": {
+    "type" : "Unlicense",
+	"url" : "https://raw.github.com/jonsherrard/jott/master/UNLICENSE"
+  },
   "engines": {
     "node": ">=0.8.4"
   }
