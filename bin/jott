@@ -16,9 +16,10 @@ var cli  = require('cli');
 cli.enable('status')
  
 cli.parse({
-    init            : ['i', 'Initialize Blog'],
+    init        : ['i', 'Initialize Blog'],
 	new			: ['n', 'New Blog Post'],
-	version		: ['v', 'Display Jott Version']
+	version		: ['v', 'Display Jott Version'],
+	compile		: ['c', 'Compile blog']
 });
  
 cli.main(function(args, options) {

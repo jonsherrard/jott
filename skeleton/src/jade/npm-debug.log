@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'pack' ]
+2 info using npm@1.1.45
+3 info using node@v0.8.4
+4 verbose config file /Users/jonsherrard/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose cache add [ '.', null ]
+8 silly cache add name=undefined spec="." args=[".",null]
+9 verbose parsed url { pathname: '.', path: '.', href: '.' }
+10 silly lockFile 3a52ce78- .
+11 verbose lock . /Users/jonsherrard/.npm/3a52ce78-.lock
+12 verbose read json package.json
+13 silly lockFile 3a52ce78- .
+14 error addLocal Could not install .
+15 error Error: ENOENT, open 'package.json'
+16 error If you need help, you may report this log at:
+16 error     <http://github.com/isaacs/npm/issues>
+16 error or email it to:
+16 error     <npm-@googlegroups.com>
+17 error System Darwin 11.4.0
+18 error command "node" "/usr/local/bin/npm" "pack"
+19 error cwd /Applications/MAMP/htdocs/jott/skeleton/src/jade
+20 error node -v v0.8.4
+21 error npm -v 1.1.45
+22 error path package.json
+23 error code ENOENT
+24 error errno 34
+25 verbose exit [ 34, true ]
