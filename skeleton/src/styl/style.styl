@@ -1,13 +1,13 @@
-//black = #202020
-//white = rgb(220,220,200)
+black = #020104
+white = #FBFEFC
 
-white = #202020
-//black = rgb(220,220,200)
-black = #dccdcc
+text = white
+bground = black
+
 
 body
-	color white
-	background black
+	color text
+	background bground
 	font-family "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif
 	line-height 1.5
 	letter-spacing 1.5
@@ -23,7 +23,7 @@ li
 	padding-bottom 0.5em
 
 a, a:hover, a:visited
-	color black
+	color bground
 	text-decoration none
 	cursor pointer
 
@@ -35,21 +35,21 @@ a, a:hover, a:visited
 
 header
 	padding 20px 0px
-	background white
-	color black
+	background text
+	color bground
 	margin-bottom 50px
 	& h1
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+		font-family: "HelveticaNeue-text", "Helvetica Neue text", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 	   font-weight: 300
 
 article
 	& p
 		margin 20px 0px
 	& a, a:hover, a:visited
-		color white
+		color text
 		font-style italic
 	& a:hover
-		color lighten(white, 30%)
+		color texten(text, 30%)
 
 .metadata
 	font-size 0.5em
@@ -69,8 +69,8 @@ footer
 	bottom 0px
 	padding 20px 0px
 	margin-top 50px
-	background white
-	color black
+	background text
+	color bground
 	left 0
 	right 0
 	margin-right auto

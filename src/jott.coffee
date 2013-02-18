@@ -1,5 +1,5 @@
 path			= require 'path'
-fs              = require 'fs-extra'
+fs				= require 'fs-extra'
 {exec} 			= require 'child_process'
 prompt			= require 'cli-prompt'
 moment			= require 'moment'
@@ -15,9 +15,9 @@ log = console.log
 
 createProject = () ->
 	settingsJSON = {}
-	prompt "Enter your Blog's name: ", (name, end) =>
+	prompt "Enter your Blog's name\n-> ", (name, end) =>
 		settingsJSON.title = entities.encode name
-		prompt "Enter your Blog's base URL, eg: \"localhost/blogtest\" or \"www.joeblogs.com\":", (url, end) =>
+		prompt "Enter your Blog's Base URL,\nEg: \"localhost/blogtest\" or \"www.joeblogs.com\" \n(This can be changed in jott.json at anytime.)\nhttp://", (url, end) =>
 			settingsJSON.baseUrl = 'http://' + url
 			end()
 			fs.writeJson projectDir + '/jott.json', settingsJSON, (err) =>
@@ -49,8 +49,16 @@ compileSource = () ->
 compileStylus = () ->
 	projectDir = path.resolve(process.cwd(), './')
 	exec 'stylus -c -o ' + projectDir + '/www/css ' + projectDir + '/src/styl/style.styl', (err, stdout, stderr) ->
-		log err if err
-		console.log 'Stylus Compiled'
+		if err
+			log err
+			throw err
+		exec 'cat www/css/reset.css www/css/style.css > www/css/c.min.css', (err, stdout, stderr) ->
+			if err
+				log err
+				throw err
+			exec 'cleancss -o www/css/c.min.css www/css/c.min.css', (err, stdout, stderr) ->
+				err && throw err
+				console.log 'Stylus Compiled'
 
 readSettings = () =>
 	fs.readJson projectDir + '/jott.json', (err, jsonObject) =>
@@ -81,7 +89,7 @@ compileJade = () =>
 
 createBlogPost = () ->
 	postTitle = ""
-	prompt 'Enter your new blog/post/page title: ', (title, end, err) =>
+	prompt 'Enter your new blog/post/page title:\n-> ', (title, end, err) =>
 		if err
 			log err
 			throw err
