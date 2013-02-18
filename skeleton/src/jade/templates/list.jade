@@ -1,6 +1,6 @@
-mixin link(title)
+mixin link(title, link)
     div
         | &#9679;  
-        a(href='posts/#{title.toLowerCase().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '')}.html') #{title}
+        a(href='posts/#{link}.html') #{title}
 
 include ../items

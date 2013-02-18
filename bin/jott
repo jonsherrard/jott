@@ -1,28 +1,19 @@
 #!/usr/bin/env node
- 
-/*
- 
-    This is the main entry point for jott. It provides a command-line interface
-    to the core proto code in `src/`, using [cli](https://github.com/chriso/cli).
- 
-*/
- 
-var path = require('path');
-var fs   = require('fs');
-var lib  = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
- 
-var cli  = require('cli');
- 
-cli.enable('status')
- 
-cli.parse({
-    init        : ['i', 'Initialize Blog'],
-	new			: ['n', 'New Blog Post'],
-	version		: ['v', 'Display Jott Version'],
-	compile		: ['c', 'Compile blog']
-});
- 
-cli.main(function(args, options) {
-    require(lib + '/jott').run(args, options);
-});
 
+var args = process.argv.slice(2);
+var commandName = args.shift();
+var commands = require('../lib/jott');
+
+switch (commandName) {
+    case '-v':
+    case '--version':
+    case 'ver':
+    case 'version':
+        var version = require('../package.json').version;
+        console.log(version);
+        break;
+    default:
+        var command = commands[commandName] || commands.help;
+        command(args);
+        break;
+}

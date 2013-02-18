@@ -7,6 +7,9 @@ jade			= require 'jade'
 {exec} 			= require 'child_process'
 prompt			= require 'cli-prompt'
 moment			= require 'moment'
+entities		= require 'entities'
+
+process.title = 'jott'
 
 projectDir = path.resolve(process.cwd(), './')
 
@@ -25,7 +28,7 @@ quitWithMsg = (message) ->
 createProject = () ->
 	settingsJSON = {}
 	prompt "Enter your Blog's name: ", (name, end) =>
-		settingsJSON.title = name
+		settingsJSON.title = entities.encode name
 		prompt "Enter your Blog's base URL, eg: \"localhost/blogtest\" or \"www.joeblogs.com\":", (url, end) =>
 			settingsJSON.baseUrl = 'http://' + url
 			end()
@@ -111,18 +114,19 @@ include ../templates/footer\n'
 			if err
 				log err
 				throw err
-			exec 'echo "mixin link(\'' + postTitle + '\')"|cat - src/jade/items.jade  > /tmp/out && mv /tmp/out src/jade/items.jade', (err, stdout, stderr) ->
-				err && throw err
+			exec 'echo "mixin link(\'' + entities.encode(postTitle) + '\', \'' + postTitle.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '') + '\')"|cat - src/jade/items.jade  > /tmp/out && mv /tmp/out src/jade/items.jade', (err, stdout, stderr) ->
+				if err
+					log err
+					throw err
 				log 'Blog added to index'
 			log 'New Post "' + postTitle + '" Created'
 
-exports.run = (args, options) ->
-	if options.version
-		quitWithMsg("Jott v#{ VERSION }")
-	if options.init
-		createProject()
-	else if options.new
-		createBlogPost()
-	else if options.compile
-		compileSource()
 
+# commands
+module.exports =
+	post: ->
+		createBlogPost()
+	init: ->
+		createProject()
+	build: ->
+		compileSource()

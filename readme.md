@@ -8,7 +8,7 @@
 
 Jott is a command-line tool built for [Node](http://nodejs.org/), it's written in [CoffeeScript](http://coffeescript.org), and is available through [npm](https://npmjs.org/).
 
-    $ npm install -g jott
+    $ sudo npm install -g jott
 
 Jott needs to be installed globally using `-g` so it can create the necessary command in `/usr/local/bin`.
 
