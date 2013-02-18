@@ -1,9 +1,5 @@
 path			= require 'path'
 fs              = require 'fs-extra'
-util			= require 'util'
-cli             = require 'cli'
-stylus			= require 'stylus'
-jade			= require 'jade'
 {exec} 			= require 'child_process'
 prompt			= require 'cli-prompt'
 moment			= require 'moment'
@@ -17,14 +13,6 @@ jottOptions = {}
 
 log = console.log
 
-VERSION = require './VERSION'
-
-CWD         = process.cwd()
-
-quitWithMsg = (message) ->
-	console.log message
-	process.exit()
-
 createProject = () ->
 	settingsJSON = {}
 	prompt "Enter your Blog's name: ", (name, end) =>
@@ -32,7 +20,7 @@ createProject = () ->
 		prompt "Enter your Blog's base URL, eg: \"localhost/blogtest\" or \"www.joeblogs.com\":", (url, end) =>
 			settingsJSON.baseUrl = 'http://' + url
 			end()
-			fs.writeJson projectDir + '/settings.json', settingsJSON, (err) =>
+			fs.writeJson projectDir + '/jott.json', settingsJSON, (err) =>
 				if settingsJSON.baseUrl is ''
 					settingsJSON.baseUrl = 'http://localhost/' + path.basename(path.dirname(require.main.filename))
 				log err if err
@@ -65,7 +53,7 @@ compileStylus = () ->
 		console.log 'Stylus Compiled'
 
 readSettings = () =>
-	fs.readJson projectDir + '/settings.json', (err, jsonObject) =>
+	fs.readJson projectDir + '/jott.json', (err, jsonObject) =>
 		if err
 			log err
 			throw err
