@@ -6,6 +6,7 @@ stylus			= require 'stylus'
 jade			= require 'jade'
 {exec} 			= require 'child_process'
 prompt			= require 'cli-prompt'
+moment			= require 'moment'
 
 projectDir = path.resolve(process.cwd(), './')
 
@@ -87,11 +88,33 @@ compileJade = () =>
 		log err if err
 		log 'Index Compiled'
 
+createBlogPost = () ->
+	postTitle = ""
+	prompt 'Enter your new blog/post/page title: ', (title, end, err) =>
+		if err
+			log err
+			throw err
+		postTitle = title
+		end()
+		dateString = moment().format('MMMM Do YYYY')
+		string = 'include ../templates/postHead\n
+\n
+article\n
+    .container\n
+        h3 ' + postTitle + '\n
+        p\n
+        h5.metadata Posted on ' + dateString + '\n
+        hr\n
 
-
-
-createBlog = () ->
-	console.log "Create Blog"
+include ../templates/footer\n'
+		fs.outputFile projectDir + '/src/jade/posts/' + postTitle.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '') + '.jade', string, (err) =>
+			if err
+				log err
+				throw err
+			exec 'echo "mixin link(\'' + postTitle + '\')"|cat - src/jade/items.jade  > /tmp/out && mv /tmp/out src/jade/items.jade', (err, stdout, stderr) ->
+				err && throw err
+				log 'Blog added to index'
+			log 'New Post "' + postTitle + '" Created'
 
 exports.run = (args, options) ->
 	if options.version
@@ -99,7 +122,7 @@ exports.run = (args, options) ->
 	if options.init
 		createProject()
 	else if options.new
-		createBlog()
+		createBlogPost()
 	else if options.compile
 		compileSource()
 

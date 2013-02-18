@@ -36,7 +36,8 @@
     "cli": "0.4.4-2",
     "walk": "2.2.1",
     "fs-extra": "0.5.0",
-    "cli-prompt": "~0.1.0"
+    "cli-prompt": "~0.1.0",
+    "moment": "~2.0.0"
   },
   "devDependencies": {},
   "bundledDependencies": [],
