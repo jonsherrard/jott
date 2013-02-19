@@ -1,7 +1,6 @@
 fs              = require 'fs-extra'
 sys             = require 'sys'
 CoffeeScript    = require 'coffee-script'
-
 walk            = require 'walk'
 
 compileScriptFile = (from, to) ->

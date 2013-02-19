@@ -96,7 +96,7 @@ createBlogPost = () ->
 		postTitle = title
 		end()
 		dateString = moment().format('MMMM Do YYYY')
-		string = 'include ../templates/postHead\n
+		string = 'include ../templates/head\n
 \n
 article\n
     .container\n
