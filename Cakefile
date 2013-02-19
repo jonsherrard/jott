@@ -9,7 +9,7 @@ compileScriptFile = (from, to) ->
     compiled = CoffeeScript.compile(script_source.toString())
     fs.writeFileSync(to.replace('.coffee', '.js'), compiled)
 
-task 'build', 'Compile src/*.coffee > lib/*.coffee', ->
+task 'build', 'Compile src/*.coffee > lib/*.js', ->
     walker = walk.walk('src')
     walker.on 'file', (root, fileStats, next) ->
         if not /.swp$/.test(fileStats.name)

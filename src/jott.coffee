@@ -52,7 +52,7 @@ compileStylus = () ->
 		if err
 			log err
 			throw err
-		exec 'cat www/css/reset.css www/css/style.css > www/css/c.min.css', (err, stdout, stderr) ->
+		exec 'cat www/css/reset.css www/css/style.css www/css/prettify.css > www/css/c.min.css', (err, stdout, stderr) ->
 			if err
 				log err
 				throw err

@@ -87,7 +87,7 @@ The newly created post will be available in the src/jade/posts/ folder
 
 	$ jott build
 
-The jott build command will compile your posts, index and stylus, along with the settings in jott.json. An index.html file will be in the project root, and all the posts will be in the 'posts' folder.
+The 'jott build' command will compile your posts, index and stylus, along with the settings in jott.json. An index.html file will appear in the project root, and all the posts will be in the 'posts' folder.
 
 ### Google Analytics
 
@@ -97,7 +97,7 @@ The jott build command will compile your posts, index and stylus, along with the
 	$ Format: UA-12345678-0
 	$ -> <code>
 
-If you have a free [Google Analytics](http://www.google.com/analytics/) account, you can add your tracking number to all pages and posts with the jott ga command.
+If you have a free [Google Analytics](http://www.google.com/analytics/) account, you can add your tracking number to all pages and posts with the 'jott ga' command.
 
 ## Author
 
