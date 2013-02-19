@@ -38,7 +38,7 @@ Initalizes the Jott blog by creating the basic blog structure and saving a blog 
 				templates/
 					footer.jade		- the jade template for the footer of each post
 					list.jade		- jade mixin for creating the index list of posts
-					post.jade		- a blank post template (N.B the 'jott post' command creates posts automatically'
+					post.jade		- a blank post template (N.B the 'jott post' command creates posts automatically)
 			styl/
 				style.styl		- stylus file for theming
 		posts/		- folder containg the rendered html for the site
