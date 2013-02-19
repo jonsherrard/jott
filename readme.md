@@ -62,6 +62,21 @@ The newly created post will be available in the src/jade/posts/ folder
     $ cd src/jade/posts
 	$ vim <title>.jade
 
+## Build
+
+	$ jott build
+
+The jott build command will compile your posts, index and stylus, along with the settings in jott.json. An index.html file will be in the project root, and all the posts will be in the 'posts' folder.
+
+## Google Analytics
+
+	$ jott ga
+	$ Enter your Google Analytics tracking code.
+	$ Format: UA-12345678-0
+	$ -> <code>
+
+If you have a free [Google Analytics](http://www.google.com/analytics/) account, you can add your tracking number to all pages and posts with the jott ga command.
+
 ## Author
 
 * [Jonathon Sherrard](https://github.com/jonsherrard) ([jonsherrard.com](http://jonsherrard.com)]
