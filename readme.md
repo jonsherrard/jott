@@ -6,20 +6,20 @@
 
 ## Preamble
 
-This is my first *real* project, therefore it may be a bit rubbish in places. Please do email me at &#106;&#111;&#110;&#064;&#097;&#110;&#100;&#116;&#104;&#097;&#116;&#115;&#046;&#105;&#116;, or send a Pull request, if you see anything glaringly awful.
+This is my first *real* project, therefore it may be a bit rubbish in places. Please do email me at &#106;&#111;&#110;&#064;&#097;&#110;&#100;&#116;&#104;&#097;&#116;&#115;&#046;&#105;&#116;, or send a pull request, if you see anything glaringly awful.
 
 Jott uses Jade for templating and Jade only. I prefer to use explicit references to the HTML tags that I work with all day. It will probably never support markdown. [Jade](https://github.com/visionmedia/jade#readme) is incredibly simple and quick to pick up.
 
 ### Philosophy
 
-Jott was born from my reluctance to blog using any real tools, my thoughts on the matter are better articulated by [@biesnecker](https://twitter.com/biesnecker) far better than I ever could [here](http://www.dev.gd/20130211-your-blog-navigation-is-superfluous.html) and [here](http://www.dev.gd/20130212-minimum-viable-blog.html).
+Jott was born from my reluctance to blog using any webapps or self-hosted blogging software, some of my thoughts on the matter of blogging are articulated far better than I ever could by [@biesnecker](https://twitter.com/biesnecker) [here](http://www.dev.gd/20130211-your-blog-navigation-is-superfluous.html) and [here](http://www.dev.gd/20130212-minimum-viable-blog.html).
 
-**TL;DR**
+**Summary**
 
 - I don't want distract myself from writing by worrying about Categories or Tags.
-- I don't want to wrestle with web based text editors to write when I'm comfortable with HTML/Jade.
+- I don't want to wrestle with web based text editors to write, especially when I'm comfortable with HTML/Jade.
 - A navigation is not neccessary, there is a list of all articles at the site index.
-- The site should be highly performant, little to zero JavaScript and a small amount of CSS.
+- The site should be highly performant, containing little to zero JavaScript and a small amount of CSS.
 - Generates static HTML.
 - Manipulated via the Command Line, where I spend most of my time.
 
