@@ -99,6 +99,18 @@ The 'jott build' command will compile your posts, index and stylus, along with t
 
 If you have a free [Google Analytics](http://www.google.com/analytics/) account, you can add your tracking number to all pages and posts with the 'jott ga' command.
 
+## Theming
+
+The theming is mostly down to you. There is a very stripped back version of Bootstrap in place, but it is not used in any overt way, rather it is there purely for pre and code blocks, as well as structure. There is basic two colour styling in style.styl.
+
+Google's prettyPrint library is used for code highlighting. Just mark your Jade as follows:
+
+    pre.prettyprint.lang-coffee
+		| @variable = 'Jott is neat'
+		| a + b = 7
+
+Obviously replace coffee with js or whichever language you prefer.
+
 ## Author
 
 * [Jonathon Sherrard](https://github.com/jonsherrard) ([jonsherrard.com](http://jonsherrard.com)]
