@@ -12,7 +12,7 @@ Jott uses Jade for templating and Jade only. I prefer to use explicit references
 
 ### Philosophy
 
-Jott was born from my reluctance to blog using any webapps or self-hosted blogging software, some of my thoughts on the matter of blogging are articulated far better than I ever could by [@biesnecker](https://twitter.com/biesnecker) [here](http://www.dev.gd/20130211-your-blog-navigation-is-superfluous.html) and [here](http://www.dev.gd/20130212-minimum-viable-blog.html).
+Jott was born from my reluctance to blog using any webapps or self-hosted blogging software, as well as some of my thoughts on the matter of blogging, which are articulated far better than I ever could by [@biesnecker](https://twitter.com/biesnecker) [here](http://www.dev.gd/20130211-your-blog-navigation-is-superfluous.html) and [here](http://www.dev.gd/20130212-minimum-viable-blog.html).
 
 **Summary**
 
