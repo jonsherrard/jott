@@ -111,6 +111,14 @@ Google's prettyPrint library is used for code highlighting. Just mark your Jade 
 
 Obviously replace coffee with js or whichever language you prefer.
 
+## Issues
+
+	- String escaping is a mess.
+	- 'jott post' can only be run in the project root.
+	- jott.coffee is too large and needs to split into smaller modules.
+
+
+
 ## Author
 
 * [Jonathon Sherrard](https://github.com/jonsherrard) ([jonsherrard.com](http://jonsherrard.com)]
