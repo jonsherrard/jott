@@ -19,6 +19,7 @@ Jott needs to be installed globally using `-g` so it can create the necessary co
 	$ mkdir test_blog
 	$ cd test_blog
     $ jott init
+
     $ Enter your Blog's name
 	$ -> <name>
     $ Enter your Blog's Base URL,
@@ -52,6 +53,7 @@ Initalizes the Jott blog by creating the basic blog structure and saving a blog 
 ### New Post
 
 	$ jott post
+
 	$ Enter your new blog/post/page title:
 	$ -> <title>
 	$ New Post "<title>" Created  
@@ -71,6 +73,7 @@ The jott build command will compile your posts, index and stylus, along with the
 ## Google Analytics
 
 	$ jott ga
+
 	$ Enter your Google Analytics tracking code.
 	$ Format: UA-12345678-0
 	$ -> <code>
