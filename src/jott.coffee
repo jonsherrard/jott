@@ -115,7 +115,7 @@ include ../templates/footer\n'
 					log err
 					throw err
 				log 'Blog added to index'
-			log 'New Post "' + postTitle + '" Created'
+			log 'New Post "' + postTitle + '" created at:\nsrc/jade/posts/' + postTitle+ '.jade'
 
 addGoogleAnalytics = () ->
 	fs.readJson projectDir + '/jott.json', (err, jsonObject) =>
