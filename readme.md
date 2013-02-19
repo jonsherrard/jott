@@ -4,6 +4,8 @@
 
 [Jott](https://github.com/jonsherrard/jott) is a static site or blog generating tool for node.js.
 
+[Example page, it's pretty nifty for generating GH pages without waiting for jekyll.](http://jonsherrard.github.com/jott/)
+
 ## Preamble
 
 This is my first *real* project, therefore it may be a bit rubbish in places. Please do email me at &#106;&#111;&#110;&#064;&#097;&#110;&#100;&#116;&#104;&#097;&#116;&#115;&#046;&#105;&#116;, or send a pull request, if you see anything glaringly awful.
