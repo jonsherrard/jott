@@ -135,10 +135,9 @@ addGoogleAnalytics = () ->
 					throw err
 				log 'Google Analytics Added'
 
-
-
 # commands
 module.exports =
+
 	post: ->
 		createBlogPost()
 	init: ->

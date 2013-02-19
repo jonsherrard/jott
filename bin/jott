@@ -1,8 +1,27 @@
 #!/usr/bin/env node
-
+var path = require('path');
+var fs = require('fs-extra');
 var args = process.argv.slice(2);
 var commandName = args.shift();
 var commands = require('../lib/jott');
+
+var existsSync;
+
+existsSync = fs.existsSync || path.existsSync;
+
+var jottDirectory;
+
+jottDirectory = function(dir) {
+	var parent;
+	if (existsSync(path.join(dir, 'jott.json'))) {
+		return dir;
+	}
+	parent = path.normalize(path.join(dir, '..'));
+	if (parent !== dir) {
+		return jottDirectory(parent);
+	}
+	throw new Error("jott.json not found in " + (process.cwd()));
+};
 
 switch (commandName) {
     case '-v':
@@ -13,6 +32,10 @@ switch (commandName) {
         console.log(version);
         break;
     default:
+		if (commandName !== 'init') {
+			global.__originalDirname = fs.realpathSync('.');
+			process.chdir(jottDirectory(__originalDirname));
+		}
         var command = commands[commandName] || commands.help;
         command(args);
         break;
