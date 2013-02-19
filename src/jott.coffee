@@ -20,9 +20,9 @@ createProject = () ->
 		prompt "Enter your Blog's Base URL,\nEg: \"localhost/blogtest\" or \"www.joeblogs.com\" \n(This can be changed in jott.json at anytime.)\nhttp://", (url, end) =>
 			settingsJSON.baseUrl = 'http://' + url
 			end()
+			if settingsJSON.baseUrl is 'http://'
+				settingsJSON.baseUrl = 'http://localhost/' + path.basename(process.cwd())
 			fs.writeJson projectDir + '/jott.json', settingsJSON, (err) =>
-				if settingsJSON.baseUrl is ''
-					settingsJSON.baseUrl = 'http://localhost/' + path.basename(path.dirname(require.main.filename))
 				log err if err
 				# Create posts folder
 				createFolders(name)
