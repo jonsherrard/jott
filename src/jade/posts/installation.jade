@@ -3,7 +3,25 @@ include ../templates/head
 article
     .container
         h3 Installation
-        p
+        p Jott is installable from npm. It requires the global '-g' flag to run.
+        pre.prettyprint.lang-js
+            | npm install jott -g
+        p To create a new Jott site, create a directory and run 'jott init'.
+        pre.prettyprint.lang-js
+            | mkdir jott_site
+            | cd jott_site
+            | jott init
+        p You will then be asked to an enter a name for your blog. This can be changed later by editing the jott.json file in your project's root directory.
+        pre.prettyprint.lang-js
+            | Enter your Blog's name 
+            | -> <Blog name>
+        p Jott wil then ask you for a baseUrl. Again, this can be changed in the jott.json file, and if you leave it blank, will default to http://localhost/<project_dir>
+        pre.prettyprint.lang-js
+            | Enter your Blog's Base URL,
+            | Eg: "localhost/blogtest" or "www.joeblogs.com"
+            | (This can be changed in jott.json at anytime.)
+            | http://example.com
+
         h5.metadata Posted on February 24th 2013
         hr
 include ../templates/footer
