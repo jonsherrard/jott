@@ -5,7 +5,7 @@ article
         h3 Installation
         p 
             | Jott is installable from 
-            a(href='http://npmjs.org/') npm registry.
+            a(href='http://npmjs.org/', target='_blank') npm registry.
             |  It requires the global '-g' flag to run.
         pre.prettyprint
             | sudo npm install jott -g
@@ -15,11 +15,11 @@ article
             | cd jott_site
             | jott init
         p You will then be asked to an enter a name for your blog. This can be changed later by editing the jott.json file in your project's root directory.
-        pre.prettyprint
+        pre
             | Enter your Blog's name 
             | -> <Blog name>
-        p Jott wil then ask you for a baseUrl. Again, this can be changed in the jott.json file, and if you leave it blank, will default to http://localhost/<project_dir>
-        pre.prettyprint
+        p Jott will then ask you for a baseUrl. Again, this can be changed in the jott.json file, and if you leave it blank, will default to http://localhost/<project_dir>
+        pre
             | Enter your Blog's Base URL,
             | Eg: "localhost/blogtest" or "www.joeblogs.com"
             | (This can be changed in jott.json at anytime.)

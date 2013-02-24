@@ -161,6 +161,9 @@ code {
   white-space: nowrap;
 }
 pre {
+  font-family: monospace, sans-serif;
+  font-size: 90%;
+  background: #fff;
   display: block;
   padding: 10px;
   margin: 0 0 1.5;
