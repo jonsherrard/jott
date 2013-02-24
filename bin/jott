@@ -3,7 +3,7 @@ var path = require('path');
 var fs = require('fs-extra');
 var args = process.argv.slice(2);
 var commandName = args.shift();
-var commands = require('../lib/jott');
+var commands = require('../lib/commands');
 
 var existsSync;
 
