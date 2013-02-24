@@ -1,7 +1,7 @@
 {
   "name": "jott",
   "preferGlobal": true,
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Jon Sherrard <j@andthats.it>",
   "description": "Minimum viable blog generator. Markup in Jade. Static HTML output.",
   "contributors": [
@@ -37,7 +37,7 @@
     "cli-prompt": "~0.1.0",
     "moment": "~2.0.0",
     "entities": "~0.1.1",
-    "clean-css": "~0.10.1"
+    "uglifycss": "~0.0.5"
   },
   "devDependencies": {},
   "bundledDependencies": [],

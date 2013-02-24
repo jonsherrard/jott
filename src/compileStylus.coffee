@@ -1,6 +1,7 @@
 path					= require 'path'
 stylus 					= require 'stylus'
 fs						= require 'fs-extra'
+uglifycss				=  require 'uglifycss'
 
 module.exports = () ->
 	# Get project directory
@@ -22,4 +23,15 @@ module.exports = () ->
 							if err
 								console.log err
 								throw err
-							console.log 'Stylus Compiled'
+							console.log 'Stylus compiled'
+							uglifyCSS()
+	
+	uglifyCSS = () ->
+		dir = projectDir + '/www/css/'
+		files = [ dir + 'reset.css', dir + 'prettify.css', dir + 'style.css']
+		fs.writeFile dir + 'c.min.css', uglifycss.processFiles(files), (err) ->
+			if err
+				console.log err
+				throw err
+			console.log 'CSS Minified'
+
