@@ -1,0 +1,138 @@
+black = #020104
+white = #FBFEFC
+
+text = white
+bground = black
+
+baseLineHeight = 1.5
+baseFontSize = 1.3125em
+baseBorderRadius = 5px
+
+body
+	color text
+	background bground
+	font-family "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif
+	line-height 1.5
+	letter-spacing 1.5
+	font-size 1.3125em
+	margin 0px
+	padding 0px
+
+h1, h2, h3, h4, h5, p
+	margin 0.1em 0
+
+ul, ol
+	padding 1em 0 0 1em
+
+li
+	padding-bottom 0.5em
+
+a, ahover, avisited
+	color bground
+	text-decoration none
+	cursor pointer
+
+
+.container, .container-fluid
+	max-width 35em
+	min-width 280px
+	margin auto
+
+header
+	padding 20px 0px
+	background white
+	color black
+	margin-bottom 50px
+	& h1
+		font-family "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+	   font-weight 300
+
+article
+	& p
+		margin 20px 0px
+	& a, ahover, avisited
+		color white
+		font-style italic
+	& ahover
+		color lighten(text, 30%)
+
+.metadata
+	font-size 0.5em
+	margin-top 40px
+	font-weight normal
+	display block
+	text-align right
+
+footer
+	position absolute
+	bottom 0px
+	padding 20px 0px
+	margin-top 50px
+	background white
+	color black
+	left 0
+	right 0
+	margin-right auto
+	margin-left auto
+
+@media (max-width: 767px)
+	body
+		padding 0px
+	.container, .container-fluid
+		padding 10px
+		
+
+//
+// Code (inline and blocK)
+// --------------------------------------------------
+
+
+// Inline and block code styles
+code, pre 
+  padding 0 3px 2px
+  font-family 'Monospace'
+  border-radius 3px
+
+
+// Inline code
+code 
+	padding 2px 4px
+	color #d14
+	background-color #f7f7f9
+	border 1px solid #e1e1e8
+	white-space nowrap
+
+
+// Blocks of code
+pre 
+	display block
+	padding 10px
+	margin 0 0 baseLineHeight
+	line-height baseLineHeight
+	word-break break-all
+	word-wrap break-word
+	white-space pre
+	white-space pre-wrap
+	background-color #f5f5f5
+	border 1px solid #ccc
+	border 1px solid rgba(0,0,0,.15)
+	border-radius baseBorderRadius
+
+	// Make prettyprint styles more spaced out for readability
+	&.prettyprint 
+		margin-bottom baseLineHeight
+
+	// Account for some code outputs that place code tags in pre tags
+	code 
+		padding 0
+		color inherit
+		white-space pre
+		white-space pre-wrap
+		background-color transparent
+		border 0
+
+// Enable scrollable blocks of code
+.pre-scrollable 
+	max-height 340px
+	overflow-y scroll
+
