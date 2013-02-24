@@ -1,6 +1,6 @@
 # Jott
 
-*v0.1.1*
+*v0.1.2*
 
 [Jott](https://github.com/jonsherrard/jott) is a static site or blog generating tool for node.js.
 
@@ -117,7 +117,6 @@ Obviously replace coffee with js or whichever language you prefer.
 
 	- String escaping is a mess.
 	- 'jott post' can only be run in the project root.
-	- jott.coffee is too large and needs to split into smaller modules.
 
 
 
