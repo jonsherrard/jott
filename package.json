@@ -1,7 +1,7 @@
 {
   "name": "jott",
   "preferGlobal": true,
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Jon Sherrard <j@andthats.it>",
   "description": "Minimum viable blog generator. Markup in Jade. Static HTML output.",
   "contributors": [
