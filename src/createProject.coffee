@@ -22,4 +22,3 @@ module.exports = () ->
 				# Create posts folder
 				createFolders(name)
 
-

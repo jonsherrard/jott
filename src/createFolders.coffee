@@ -7,6 +7,12 @@ module.exports = (name) ->
 	projectDir = path.resolve(process.cwd(), './')
 	# Defines the skeleton path
 	templateDir = path.resolve(__dirname, '../skeleton/')
+
+	fs.mkdirs projectDir + '/posts/', (err) ->
+		if err
+			console.log err
+			throw err
+		console.log 'Posts directory created'
 	
 	# Copy the skeleton directory from the node_module to project directory
 	fs.copy templateDir, projectDir, (err) ->
