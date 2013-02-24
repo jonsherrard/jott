@@ -1,4 +1,5 @@
 {
   "title": "Jott",
-  "baseUrl": "http://jonsherrard.github.com/jott"
+  "baseUrl": "http://jonsherrard.github.com/jott",
+  "googleAnalytics": "UA-38770060-1"
 }
