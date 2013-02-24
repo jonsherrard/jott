@@ -104,6 +104,7 @@ a.archive:hover {
 }
 .metadata {
   font-size: 50%;
+  font-family: sans-serif;
   margin-top: 40px;
   font-weight: normal;
   display: block;
