@@ -1,19 +1,25 @@
-{exec}					= require 'child_process'
 path					= require 'path'
+stylus 					= require 'stylus'
+fs						= require 'fs-extra'
 
 module.exports = () ->
+	# Get project directory
 	projectDir = path.resolve(process.cwd(), './')
-	exec 'stylus -c -o ' + projectDir + '/www/css ' + projectDir + '/src/styl/style.styl', (err, stdout, stderr) ->
+
+	stylusFiles = fs.readdir projectDir + '/src/styl/', (err, files) ->
 		if err
-			log err
+			console.log err
 			throw err
-		exec 'cat www/css/reset.css www/css/style.css www/css/prettify.css > www/css/c.min.css', (err, stdout, stderr) ->
-			if err
-				log err
-				throw err
-			exec 'cleancss -o www/css/c.min.css www/css/c.min.css', (err, stdout, stderr) ->
-				err && throw err
-				console.log 'Stylus Compiled'
-
-
-
+		files.forEach (file) ->
+			fs.readFile projectDir + '/src/styl/' + file, (err, data) =>
+				stylus(data.toString())
+					.set('filename', file)
+					.render (err, css) ->
+						if err
+							console.log err
+							throw err
+						fs.writeFile projectDir + '/www/css/style.css', css, (err) ->
+							if err
+								console.log err
+								throw err
+							console.log 'Stylus Compiled'
