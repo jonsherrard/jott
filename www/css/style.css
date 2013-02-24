@@ -1,20 +1,193 @@
-body{color:#fbfefc;background:#020104;font-family:"Palatino Linotype",Palatino,Palladio,"URW Palladio L","Book Antiqua",Baskerville,"Bookman Old Style","Bitstream Charter","Nimbus Roman No9 L",Garamond,"Apple Garamond","ITC Garamond Narrow","New Century Schoolbook","Century Schoolbook","Century Schoolbook L",Georgia,serif;line-height:1.5;letter-spacing:1.5;font-size:1.3125em;margin:0;padding:0}
-h1,h2,h3,h4,h5,p{margin:.1em 0}
-ul,ol{padding:1em 0 0 1em}
-li{padding-bottom:.5em}
-a,ahover,avisited{color:#020104;text-decoration:none;cursor:pointer}
-.container,.container-fluid{max-width:35em;min-width:280px;margin:auto}
-header{padding:20px 0;background:#fbfefc;color:#020104;margin-bottom:50px;font-weight:300}
-header h1{font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif}
-article p{margin:20px 0}
-article a,article ahover,article avisited{color:#fbfefc;font-style:italic}
-article ahover{color:#fcfefd}
-.metadata{font-size:.5em;margin-top:40px;font-weight:normal;display:block;text-align:right}
-footer{position:absolute;bottom:0;padding:20px 0;margin-top:50px;background:#fbfefc;color:#020104;left:0;right:0;margin-right:auto;margin-left:auto}
-@media (max-width: 767px){body{padding:0}
-.container,.container-fluid{padding:10px}
-}code,pre,padding 03px2px,font-family 'Monospace',border-radius 3px,code{padding:2px 4px;color:#d14;background-color:#f7f7f9;border:1px solid #e1e1e8;white-space:nowrap}
-pre{display:block;padding:10px;margin:0 0 1.5;line-height:1.5;word-break:break-all;word-wrap:break-word;white-space:pre;white-space:pre-wrap;background-color:#f5f5f5;border:1px solid #ccc;border:1px solid rgba(0,0,0,0.15);border-radius:5px;}
-pre.prettyprint{margin-bottom:1.5}
-pre code{padding:0;color:inherit;white-space:pre;white-space:pre-wrap;background-color:transparent;border:0}
-.pre-scrollable{max-height:340px;overflow-y:scroll}
+body {
+  color: #202020;
+  background: #f4f4f4;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  line-height: 1.5;
+  letter-spacing: 1.5;
+  font-size: 1.4em;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  bottom: 4px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0.1em 0;
+}
+ul,
+ol {
+  padding: 1em 0 1em 1em;
+}
+li {
+  padding-bottom: 0.5em;
+}
+.container,
+.container-fluid {
+  max-width: 35em;
+  min-width: 280px;
+  margin: auto;
+}
+header {
+  width: 100%;
+  padding: 0px;
+  background: #202020;
+  color: #f4f4f4;
+}
+header h1 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+}
+header h1 a.title {
+  font-size: 24px;
+  color: #f4f4f4;
+}
+header .container {
+  padding: 0 20px;
+}
+a,
+a:hover,
+a:visited {
+  color: #202020;
+  text-decoration: none;
+  cursor: pointer;
+}
+article {
+  padding: 50px 0px;
+}
+article h3 {
+  font-size: 250%;
+  font-weight: normal;
+}
+article h4 {
+  font-size: 125%;
+  font-weight: normal;
+}
+article p,
+article ul,
+article li,
+article a {
+  margin: 20px 0px;
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+article a,
+article a:hover,
+article avisited {
+  color: #202020;
+  font-style: italic;
+  background: rgba(255,255,168,0.5);
+  font-weight: 300;
+}
+article a:hover {
+  background: #ffffa8;
+}
+article img {
+  border: #f4f4f4 solid 10px;
+  box-shadow: #e0e0e0 3px 3px;
+  box-sizing: border-box;
+}
+a.archive {
+  font-size: 150%;
+  line-height: 70px;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  color: #202020;
+  width: 100%;
+  display: block;
+}
+a.archive:hover {
+  color: #636363;
+}
+.metadata {
+  font-size: 50%;
+  margin-top: 40px;
+  font-weight: normal;
+  display: block;
+  text-align: right;
+}
+.red_article {
+  background: #500000;
+}
+.blue_article {
+  background: #03031e;
+}
+footer {
+  position: absolute;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  bottom: 0px;
+  width: 100%;
+  margin-top: 50px;
+  background: #202020;
+  color: #f4f4f4;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+footer h1,
+footer a.title {
+  font-size: 100%;
+  color: #f4f4f4;
+}
+@media (max-width: 767px) {
+  body {
+    padding: 0px;
+    font-size: 1em;
+  }
+  .container,
+  .container-fluid {
+    padding: 20px;
+  }
+  a.archive {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+code,
+pre,
+padding 03px2px,
+font-family 'Monospace',
+border-radius 3px,
+font-size baseFontSize,
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
+}
+pre {
+  display: block;
+  padding: 10px;
+  margin: 0 0 1.5;
+  line-height: 1.5;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 5px;
+}
+pre.prettyprint {
+  margin-bottom: 1.5;
+  font-size: 90%;
+  font-family: monospace, serif;
+}
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
