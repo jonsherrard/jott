@@ -3,7 +3,23 @@ include ../templates/head
 article
     .container
         h3 Usage
-        p
+        p Jott has two main commands. Build, and post.
+        p After you've made any changes to the styl.styl file, or to any of the jade files, or after you've created a new post, you'll need to run build.
+        p You can run build in any child directory of the project root.
+        pre
+            | jott build
+        p Whenever you'd like to create a new post, simply enter:
+        pre
+            | jott post
+        p You'll be prompted to enter a name for the post.
+        pre
+            | Enter your new blog/post/page title:
+            | -> <Post name>
+        p 
+            | A new template will be created in src/jade/posts/, and an entry will be added to src/jade/items.jade. The new template will already include the post title, and the current date. You are then free to write the rest of your post in the 
+            a(href='http://jade-lang.com/') Jade
+            |  markup language.
+        p Remember to run 'jott build' after you're finished to compile it into HTML.
         h5.metadata Posted on February 24th 2013
         hr
 include ../templates/footer
