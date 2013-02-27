@@ -19,6 +19,7 @@ module.exports = (jottOptions) =>
 				fs.readFile projectDir + '/src/jade/posts/' + fileName + '.jade', (err, data) =>
 					options =
 						filename : projectDir + '/src/jade/posts/' + fileName + '.jade'
+						pretty : true
 					compileFile = jade.compile data.toString(), options
 					fs.writeFile projectDir + '/posts/' + fileName + '.html', compileFile(locals), (err) ->
 						if err
@@ -30,6 +31,7 @@ module.exports = (jottOptions) =>
 		fs.readFile projectDir + '/src/jade/index.jade', (err, data) =>
 			options =
 				filename : projectDir + '/src/jade/index.jade'
+				pretty : true
 			compileIndex = jade.compile data.toString(), options
 			fs.writeFile projectDir + '/index.html', compileIndex(locals), (err) ->
 				if err

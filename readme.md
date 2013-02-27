@@ -1,6 +1,6 @@
 # Jott
 
-*v0.1.7*
+*v0.1.8*
 
 [Jott](https://github.com/jonsherrard/jott) is a static site or blog generating tool for node.js.
 
