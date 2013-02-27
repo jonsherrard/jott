@@ -3,7 +3,26 @@ include ../templates/head
 article
     .container
         h3 Customisation
-        p
+        p Jott comes with a readable, but very basic stylesheet. This can be found and customised here:
+        pre
+            | src/style/style.styl
+        p All pages use a head and a footer, which are found in the templates file.
+        p The root page is index.jade
+        p All pages are passed the jott.json file during jott build. Therefore any variable in jott.json is accessible using Jade's string interpolation. The only variables in there by default are 'title', and base url.
+        pre.prettyprint.lang-js
+            | {
+            |   "title" : "Jott",
+            |   "baseUrl" : "http://jonsherrard.github.com/jott/",
+            |   "googleAnalytics" : "UA-1234567-0",
+            |   "variableName" : "Variable Value"
+
+
+        p Any variable in the jott.json file, can be accessed as follows:
+        pre
+            | h1 \#\{variableName}
+            | This will be rendered as:
+            | <h1>Variable Value</h1>
+        p: a(href='#{baseUrl}/posts/road-map.html') Click here to read about feature on the Jott road map.
         h5.metadata Posted on February 24th 2013
         hr
 include ../templates/footer

@@ -5,4 +5,10 @@
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();</script></head><body onload="prettyPrint()"><header><!--.container<h1> <a href="http://jonsherrard.github.com/jott" class="title">Jott</a></h1>--><!----></header></body></html><article><div class="container"><h3>Customisation</h3><p></p><h5 class="metadata">Posted on February 24th 2013</h5><hr/></div></article><footer><div class="container"><h1><a href="http://jonsherrard.github.com/jott" class="title">Jott.</a></h1></div></footer>
+    })();</script></head><body onload="prettyPrint()"><header><!--.container<h1> <a href="http://jonsherrard.github.com/jott" class="title">Jott</a></h1>--><!----></header></body></html><article><div class="container"><h3>Customisation</h3><p>Jott comes with a readable, but very basic stylesheet. This can be found and customised here:</p><pre>src/style/style.styl</pre><p>All pages use a head and a footer, which are found in the templates file.</p><p>The root page is index.jade</p><p>All pages are passed the jott.json file during jott build. Therefore any variable in jott.json is accessible using Jade's string interpolation. The only variables in there by default are 'title', and base url.</p><pre class="prettyprint lang-js">{
+  &quot;title&quot; : &quot;Jott&quot;,
+  &quot;baseUrl&quot; : &quot;http://jonsherrard.github.com/jott/&quot;,
+  &quot;googleAnalytics&quot; : &quot;UA-1234567-0&quot;,
+  &quot;variableName&quot; : &quot;Variable Value&quot;</pre><p>Any variable in the jott.json file, can be accessed as follows:</p><pre>h1 \#\{variableName}
+This will be rendered as:
+&lt;h1&gt;Variable Value&lt;/h1&gt;</pre><p><a href="http://jonsherrard.github.com/jott/posts/road-map.html">Click here to read about feature on the Jott road map.</a></p><h5 class="metadata">Posted on February 24th 2013</h5><hr/></div></article><footer><div class="container"><h1><a href="http://jonsherrard.github.com/jott" class="title">Jott.</a></h1></div></footer>
