@@ -7,7 +7,11 @@ article
         pre
             | src/style/style.styl
         p All pages use a head and a footer, which are found in the templates file.
+        pre
+            | src/jade/templates/
         p The root page is index.jade
+        pre
+            | src/jade/index.jade
         p All pages are passed the jott.json file during jott build. Therefore any variable in jott.json is accessible using Jade's string interpolation. The only variables in there by default are 'title', and base url.
         pre.prettyprint.lang-js
             | {
