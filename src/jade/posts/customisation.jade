@@ -15,13 +15,15 @@ article
             |   "baseUrl" : "http://jonsherrard.github.com/jott/",
             |   "googleAnalytics" : "UA-1234567-0",
             |   "variableName" : "Variable Value"
+            | }
 
 
         p Any variable in the jott.json file, can be accessed as follows:
         pre
-            | h1 &#35;{variableName}
-            | This will be rendered as:
-            | <h1>Variable Value</h1>
+            code
+                | h1 &#35;{variableName}
+                | This will be rendered as:
+                | &#60;h1>Variable Value&#60;/h1>
         p: a(href='#{baseUrl}/posts/road-map.html') Click here to read about feature on the Jott road map.
         h5.metadata Posted on February 24th 2013
         hr
