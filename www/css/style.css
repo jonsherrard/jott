@@ -73,6 +73,7 @@ article p,
 article ul,
 article li,
 article a {
+  font-weight: 300;
   margin: 20px 0px;
   font-size: 100%;
   line-height: 1.5;
