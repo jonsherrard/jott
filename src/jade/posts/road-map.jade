@@ -3,7 +3,17 @@ include ../templates/head
 article
     .container
         h3 Road Map
-        p
+        ul
+            li Fix the stylesheets. They're a real mess and I'd like them to work cross browser back to IE8.
+            li 
+                | Add 
+                a(href='http://listjs.com') Listjs
+                |  to the index page to make posts searchable.
+
+            li
+                | Build some sort of plugin and themeing system. I have a backbone-ified single page version of Jott ready but I feel like including it in the main pack is against the ethos of a minimal fuss blog for hackers.
+            li Write documentation on how to include code in Jade files.
+            li Write an update function to run after 'npm update', so that upgrading Jott is possible without overwriting styles or posts.
         h5.metadata Posted on February 24th 2013
         hr
 include ../templates/footer
