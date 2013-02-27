@@ -1,10 +1,53 @@
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=0.5"/><title>Jott</title><link rel="stylesheet" href="http://jonsherrard.github.com/jott/www/css/c.min.css"/><script type="text/javascript" src="http://jonsherrard.github.com/jott/www/js/prettify.js"></script><script type="text/javascript">var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-38770060-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();</script></head><body onload="prettyPrint()"><header><!--.container<h1> <a href="http://jonsherrard.github.com/jott" class="title">Jott</a></h1>--><!----></header></body></html><article><div class="container"><h3>Usage</h3><p>Jott has two main commands. Build, and post.</p><p>After you've made any changes to the styl.styl file, or to any of the jade files, or after you've created a new post, you'll need to run build.</p><p>You can run build in any child directory of the project root.</p><pre>jott build</pre><p>Whenever you'd like to create a new post, simply enter:</p><pre>jott post</pre><p>You'll be prompted to enter a name for the post.</p><pre>Enter your new blog/post/page title:
--&gt; &lt;Post name&gt;</pre><p> 
-A new template will be created in src/jade/posts/, and an entry will be added to src/jade/items.jade. The new template will already include the post title, and the current date. You are then free to write the rest of your post in the <a href="http://jade-lang.com/">Jade</a> markup language.</p><p>Remember to run 'jott build' after you're finished to compile it into HTML.</p><p><a href="http://jonsherrard.github.com/jott/posts/customisation.html">Read the customisation docs here.</a></p><h5 class="metadata">Posted on February 24th 2013</h5><hr/></div></article><footer><div class="container"><h1><a href="http://jonsherrard.github.com/jott" class="title">Jott.</a></h1></div></footer>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+    <title>Jott</title>
+    <link rel="stylesheet" href="http://jonsherrard.github.com/jott/www/css/c.min.css"/>
+    <script type="text/javascript" src="http://jonsherrard.github.com/jott/www/js/prettify.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-38770060-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+    </script>
+  </head>
+  <body onload="prettyPrint()">
+    <header><!--.container
+      <h1> <a href="http://jonsherrard.github.com/jott" class="title">Jott</a></h1>-->
+      <!---->
+    </header>
+  </body>
+</html>
+<article>
+  <div class="container">
+    <h3>Usage</h3>
+    <p>Jott has two main commands. Build, and post.</p>
+    <p>After you've made any changes to the styl.styl file, or to any of the jade files, or after you've created a new post, you'll need to run build.</p>
+    <p>You can run build in any child directory of the project root.</p>
+    <pre>jott build</pre>
+    <p>Whenever you'd like to create a new post, simply enter:</p>
+    <pre>jott post</pre>
+    <p>You'll be prompted to enter a name for the post.</p>
+    <pre>Enter your new blog/post/page title:
+-&gt; &lt;Post name&gt;</pre>
+    <p>
+       
+      A new template will be created in src/jade/posts/, and an entry will be added to src/jade/items.jade. The new template will already include the post title, and the current date. You are then free to write the rest of your post in the <a href="http://jade-lang.com/">Jade</a> markup language.
+    </p>
+    <p>Remember to run 'jott build' after you're finished to compile it into HTML.</p>
+    <p><a href="http://jonsherrard.github.com/jott/posts/customisation.html">Read the customisation docs here.</a></p>
+    <h5 class="metadata">Posted on February 24th 2013</h5>
+    <hr/>
+  </div>
+</article>
+<footer>
+  <div class="container">
+    <h1><a href="http://jonsherrard.github.com/jott" class="title">Jott.</a></h1>
+  </div>
+</footer>
